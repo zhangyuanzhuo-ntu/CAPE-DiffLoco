@@ -60,13 +60,13 @@ For ONNX export, install the compatible PyTorch ONNX export dependencies for you
 | Fixed-alpha state alignment and gradient unit test | Implemented |
 | Contact-modulated SRB surrogate | Simplified demonstration; not a calibrated full robot model |
 | End-to-end *synthetic* CPU smoke test | Implemented; gradients checked |
-| Isaac Lab environment integration | **Not implemented** — explicit adapter stub |
-| Realistic PD/Jacobian-to-contact-force mapping | **Not implemented** in Isaac pipeline |
-| Multi-step physically consistent BPTT | **Not implemented** in Isaac pipeline |
-| PPO / DiffSim / ablation baseline training | **Not implemented** |
-| Simulation and real-world episode evaluations | **Not implemented** |
-| Go1 onboard low-level control and safety | **Not implemented** |
-| Actual pretrained policy or paper-matching logs | **Not provided** |
+| Isaac Lab environment integration | Implementation Status and Reproduction Roadmap — explicit adapter stub |
+| Realistic PD/Jacobian-to-contact-force mapping | Implementation Status and Reproduction Roadmap in Isaac pipeline |
+| Multi-step physically consistent BPTT | Implementation Status and Reproduction Roadmap in Isaac pipeline |
+| PPO / DiffSim / ablation baseline training |Implementation Status and Reproduction Roadmap|
+| Simulation and real-world episode evaluations |Implementation Status and Reproduction Roadmap |
+| Go1 onboard low-level control and safety | Implementation Status and Reproduction Roadmap |
+| Actual pretrained policy or paper-matching logs | Implementation Status and Reproduction Roadmap |
 
 See [REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) for exact requirements and [ISAAC_LAB_INTEGRATION.md](docs/ISAAC_LAB_INTEGRATION.md) for missing interfaces. `configs/train_cape_go1.yaml` is a **target experiment specification, not a working training command**.
 
