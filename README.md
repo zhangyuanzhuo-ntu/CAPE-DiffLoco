@@ -94,3 +94,24 @@ This project builds conceptually on **Learning Quadruped Locomotion Using Differ
 ## Contributing
 
 Bug reports, tested environment adapters, ablations, and reproducibility contributions are welcome through GitHub Issues and pull requests. Please distinguish observed results from hypotheses and mock demonstrations. No specific open-source license is granted until the authors choose a license.
+
+# CAPE-DiffLoco implementation extension
+
+This is an **implementation proposal**, not a record of completed Isaac Lab or Go1 experiments.
+Configuration values are **proposed defaults**, not recovered historical training settings.
+The package includes a CPU-testable dynamics and BPTT reference, configurable terrain definitions,
+baseline architecture definitions, and a Go1 command-adapter design.
+No fabricated logs, trained checkpoints, or hardware-validation claims are included.
+
+Install: `pip install torch numpy pyyaml pytest`
+Run tests: `python -m pytest -q`
+Run CPU differentiability demo: `python scripts/gradient_demo.py`
+Generate terrain manifest: `python scripts/generate_terrain_manifest.py --config configs/terrain.yaml --out outputs/terrain_manifest.json`
+
+Isaac Lab integration still requires a pinned compatible Isaac Lab release, asset paths,
+robot articulation setup, sensor interfaces, and hardware-backed testing. The terrain manifest
+is not an Isaac Lab USD scene; the corresponding terrain import implementation remains required.
+
+For the paper tables, publish measured episode-level logs only when actual experiments exist.
+Absent data must be marked `not yet released`; never reconstruct experiments from manuscript aggregates.
+
