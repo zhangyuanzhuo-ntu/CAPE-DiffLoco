@@ -1,0 +1,23 @@
+# NOT EXECUTABLE: proposed experiment specification; real backend/baseline not implemented.
+evaluation:
+  num_trials_per_scenario: 100
+  command_velocity_mps: [0.2, 0.4, 0.6]
+  scenarios:
+    - indoor_regular_stairs
+    - irregular_stairs
+    - metal_steps_low_damping
+    - wet_brick_low_friction
+    - muddy_grass_deformable
+    - steep_slope_40deg
+    - trench_transition
+metrics:
+  - success_rate
+  - fall_rate
+  - velocity_error
+  - yaw_error
+  - recovery_time
+  - contact_f1
+  - slip_ratio
+  - foot_clearance_error
+  - alignment_residual
+  - gradient_norm

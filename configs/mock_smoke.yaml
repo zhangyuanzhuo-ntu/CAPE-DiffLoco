@@ -1,0 +1,27 @@
+seed: 42
+device: cpu
+simulator: mock
+experiment_name: mock_smoke
+output_dir: outputs/mock_smoke
+training:
+  iterations: 2
+  horizon: 2
+  batch_size: 4
+  lr: 0.0003
+  alpha: 0.8
+  save_every: 1
+model:
+  obs_dim: 49
+  action_dim: 12
+  state_dim: 13
+  history_length: 10
+  contact_horizon: 5
+  latent_dim: 16
+  hidden_dim: 32
+loss:
+  w_track: 1.0
+  w_posture: 0.5
+  w_energy: 0.02
+  w_support: 0.2
+  w_slip: 0.2
+  w_contact: 0.1

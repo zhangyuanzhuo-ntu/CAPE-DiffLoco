@@ -1,0 +1,17 @@
+# NOT EXECUTABLE: proposed experiment specification; real backend/baseline not implemented.
+seed: 0
+device: cuda
+experiment_name: ppo_go1_baseline
+output_dir: outputs/ppo_go1_baseline
+baseline: ppo
+training:
+  iterations: 20000
+  num_envs: 4096
+  horizon: 24
+  lr: 0.0003
+ppo:
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_param: 0.2
+  entropy_coef: 0.01
+  value_loss_coef: 1.0

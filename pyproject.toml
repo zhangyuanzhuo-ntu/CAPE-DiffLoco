@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cape-diffloco"
+version = "0.1.0"
+description = "Research scaffold for contact-aware predictive embedding in differentiable quadruped locomotion"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.1", "numpy>=1.24", "pyyaml>=6.0", "matplotlib>=3.7", "pandas>=2.0", "tqdm>=4.66"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true

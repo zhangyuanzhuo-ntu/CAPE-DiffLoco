@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.DS_Store
+.idea/
+.vscode/
+.pytest_cache/
+outputs/
+runs/
+wandb/
+checkpoints/
+*.onnx
+*.pt
+*.pth
+*.tfevents.*

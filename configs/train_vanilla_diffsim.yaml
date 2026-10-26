@@ -1,0 +1,17 @@
+# NOT EXECUTABLE: proposed experiment specification; real backend/baseline not implemented.
+seed: 0
+device: cuda
+experiment_name: vanilla_diffsim_go1
+output_dir: outputs/vanilla_diffsim_go1
+baseline: vanilla_fixed_alpha
+training:
+  iterations: 20000
+  horizon: 24
+  num_envs: 4096
+  lr: 0.0001
+  alpha: 0.9
+model:
+  obs_dim: 48
+  action_dim: 12
+  state_dim: 13
+  hidden_dim: 256

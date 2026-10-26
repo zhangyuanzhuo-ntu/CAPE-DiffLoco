@@ -1,0 +1,42 @@
+# EXPERIMENT SPECIFICATION ONLY: the Isaac Lab backend is not implemented.
+seed: 0
+device: cuda
+simulator: isaac_lab
+experiment_name: cape_go1_stairs
+output_dir: outputs/cape_go1_stairs
+robot: unitree_go1
+control_frequency_hz: 100
+training:
+  iterations: 20000
+  horizon: 24
+  num_envs: 4096
+  lr: 0.0001
+  alpha: 0.9
+  save_every: 500
+model:
+  obs_dim: 49 # includes estimated contact signals; verify against deployed observation spec
+  action_dim: 12
+  state_dim: 13
+  history_length: 10
+  contact_horizon: 5
+  latent_dim: 16
+  hidden_dim: 256
+terrain_curriculum:
+  terrain_types: [flat, rough, stairs_regular, stairs_irregular, metal_steps, wet_brick, slope, trench]
+  max_slope_deg: 40
+  stair_riser_m: [0.08, 0.22]
+  stair_tread_m: [0.18, 0.35]
+randomization:
+  friction: [0.25, 1.25]
+  payload_kg: [0.0, 3.0]
+  motor_strength: [0.75, 1.25]
+  com_shift_m: [-0.04, 0.04]
+  control_latency_s: [0.0, 0.04]
+loss:
+  w_track: 1.0
+  w_posture: 0.6
+  w_energy: 0.02
+  w_clearance: 0.4 # requires simulator-only terrain height labels
+  w_support: 0.5
+  w_slip: 0.3
+  w_contact: 0.2
